@@ -33,7 +33,22 @@ w3 = int(w[16:24], 2)
 
 w4 = int(w[24:32], 2)
 
+e = '{0:08b}{1:08b}{2:08b}{3:08b}'.format(ip1,ip2,ip3,ip4)
+
+esrez = e[0:mask]
+
+eitog = esrez + q2
+
+e1 = int(eitog[0:8], 2)
+
+e2 = int(eitog[8:16], 2)
+
+e3 = int(eitog[16:24], 2)
+
+e4 = int(eitog[24:32], 2)
+
+
 t1 = ['-'*20 +'\n'*2 +'Network:\n' '{0:<8} {1:<8} {2:<8} {3:<8}\n' '{0:08b} {1:08b} {2:08b} {3:08b}\n' 'Mask:\n' 
 '\n' '/{4:}\n' '{5:<8} {6:<8} {7:<8} {8:<8}\n' '{5:<08b} {6:<08b} {7:<08b} {8:<08b}']
 
-print(((' ').join(t1)).format(ip1,ip2,ip3,ip4,mask,w1,w2,w3,w4))
+print(((' ').join(t1)).format(e1,e2,e3,e4,mask,w1,w2,w3,w4))
