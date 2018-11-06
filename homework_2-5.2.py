@@ -24,8 +24,8 @@ london_co = {
 }
 }
 r1 = input ('Enter device name: ')
-#r2 = input('Enter parameter name:')
 b = str(london_co[r1].keys ())
 b1 = b[11:-2]
+k1 = london_co[r1]
 r2 = input('Enter parameter name ({} )'.format(b1))
-print(london_co[r1][r2])
+print(k1.get(r2, 'Takogo parametra net'))
