@@ -29,7 +29,7 @@ for intf, vlan in fast_int['trunk'].items():
                  a = vlan.find(',')
                  vlan = list(vlan)
                  vlan.pop(a)
-                 vlan = ''.join([str(vlans) for vlans in vlan
+                 vlan = ''.join([str(vlans) for vlans in vlan])
                  print(' {} {}'.format(command, vlan))
              else:
                  print('NE TE COMANDY')
