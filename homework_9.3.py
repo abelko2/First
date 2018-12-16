@@ -33,7 +33,7 @@ def get_int_vlan_map(cfg):
 	return result_access
 	return result_trunk
 
-get_int_vlan_map('config_sw1.txt')
+get_int_vlan_map('config_sw1-home9.txt')
 
 print(result_access)
 print(result_trunk)
